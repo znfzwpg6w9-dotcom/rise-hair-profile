@@ -3,7 +3,7 @@
 美容師 脇 翔麻さんのプロフィールページ（NFC カード＋プロフィールページ）。
 1 仕事 1 記録。新しい記録を下に追記する。
 
-## 2026-10-01 店舗中心 → 個人中心へ変更（ローカル実装・検証済み／commit 前）
+## 2026-10-01 店舗中心 → 個人中心へ変更（commit `ba852d6` 済み／push 前）
 
 ### 方針（社長確定）
 
@@ -40,7 +40,16 @@
 
 ### 未実施（社長確認待ち）
 
-- commit / push / deploy
-- Vercel へのドメイン `shoma.studioroko.net` 追加・Squarespace の CNAME 追加
+- push / 本番反映（push 後に本番 `https://shoma.studioroko.net/` の表示確認が必要）
 - GitHub repo の移管・非公開化、remote 変更
 - NFC 書き込み・裏面QR の確認（実物カード）
+
+## 2026-10-02 shoma.studioroko.net 接続（push 前の現在地）
+
+- 個人中心の変更は commit `ba852d6`（Refactor profile around Shoma Waki）済み。**まだ push していない**
+- `shoma.studioroko.net` を Vercel プロジェクト `rise-hair-profile-1qbq` に追加し、Squarespace に CNAME を追加（社長が実施）
+  - DNS: `shoma` → CNAME `fa0ca3adf77c5d66.vercel-dns-017.com`。Vercel は Valid Configuration
+- 接続後の確認（読み取りのみ）: `https://shoma.studioroko.net/` は HTTPS 200・証明書検証 OK・Vercel 配信。
+  表示されているのは**旧本番ページ**（店舗中心の `bc86dfc` と完全一致。title「RISE HAIR | 脇 翔麻」、canonical は vercel.app）
+- `rise-hair-profile-1qbq.vercel.app` はドメイン追加後も残る
+- 次: push → Vercel 自動デプロイ → 本番 `https://shoma.studioroko.net/` で 390 / 1440px の表示・OGP・リンクを確認
