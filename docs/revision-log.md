@@ -3,7 +3,7 @@
 美容師 脇 翔麻さんのプロフィールページ（NFC カード＋プロフィールページ）。
 1 仕事 1 記録。新しい記録を下に追記する。
 
-## 2026-10-01 店舗中心 → 個人中心へ変更（commit `ba852d6` 済み／push 前）
+## 2026-10-01 店舗中心 → 個人中心へ変更（記録時点: commit `ba852d6` 済み／push 前）
 
 ### 方針（社長確定）
 
@@ -38,18 +38,39 @@
   title・canonical・OGP、「脇 翔麻」表記（「翔磨」0 件）、href は確認済みの 4 件＋`#salon` のみ、
   店舗情報が `#salon` に集約、PC で `.site` 幅 440px
 
-### 未実施（社長確認待ち）
+### 記録時点の未実施事項（現在の状態は末尾参照）
 
 - push / 本番反映（push 後に本番 `https://shoma.studioroko.net/` の表示確認が必要）
 - GitHub repo の移管・非公開化、remote 変更
 - NFC 書き込み・裏面QR の確認（実物カード）
 
-## 2026-10-02 shoma.studioroko.net 接続（push 前の現在地）
+## 2026-10-02 shoma.studioroko.net 接続（接続時点の履歴・push 前）
 
-- 個人中心の変更は commit `ba852d6`（Refactor profile around Shoma Waki）済み。**まだ push していない**
+- 個人中心の変更は commit `ba852d6`（Refactor profile around Shoma Waki）済み。**接続時点では未 push**
 - `shoma.studioroko.net` を Vercel プロジェクト `rise-hair-profile-1qbq` に追加し、Squarespace に CNAME を追加（社長が実施）
   - DNS: `shoma` → CNAME `fa0ca3adf77c5d66.vercel-dns-017.com`。Vercel は Valid Configuration
 - 接続後の確認（読み取りのみ）: `https://shoma.studioroko.net/` は HTTPS 200・証明書検証 OK・Vercel 配信。
-  表示されているのは**旧本番ページ**（店舗中心の `bc86dfc` と完全一致。title「RISE HAIR | 脇 翔麻」、canonical は vercel.app）
+  接続時点で表示されていたのは**旧本番ページ**（店舗中心の `bc86dfc` と完全一致。title「RISE HAIR | 脇 翔麻」、canonical は vercel.app）
 - `rise-hair-profile-1qbq.vercel.app` はドメイン追加後も残る
-- 次: push → Vercel 自動デプロイ → 本番 `https://shoma.studioroko.net/` で 390 / 1440px の表示・OGP・リンクを確認
+- 当時の次の手順: push → Vercel 自動デプロイ → 本番 `https://shoma.studioroko.net/` で 390 / 1440px の表示・OGP・リンクを確認
+
+## 2026-10-02 本番反映・確認完了（現在の状態）
+
+以下はユーザー確認済みの情報に基づく記録。今回の文書更新では push・デプロイ・本番検証を再実行していない。
+
+- `main` は push 済み。Production deploy は success
+- `https://shoma.studioroko.net/` に個人中心のプロフィールページを本番反映済み
+- 本番 HTML / CSS / JS は確認対象の HEAD `12e4e95e9dcee09f96069e997bd5ed8d49d7b835` と一致
+- Playwright 390px / 1440px は 38/38 PASS
+- canonical / OGP / リンク / 氏名 / 所属構造は確認済み
+- 上記の履歴にある push・本番反映・本番確認待ちは解消済み
+
+### 残作業（未完了）
+
+- GitHub repo の移管・非公開化の検討（必要な remote 変更を含む）
+- NFC 書き込み確認
+- 裏面QR の実物確認
+- AI 印刷入稿データ試験
+- 実物 2 枚の検品・納品
+
+残作業は追加の依頼・判断後に進める。
