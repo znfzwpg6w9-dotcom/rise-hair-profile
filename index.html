@@ -6,29 +6,23 @@
   <meta name="format-detection" content="telephone=yes">
 
   <!-- ===== SEO ===== -->
-  <!--
-    ★ 個人中心のプロフィールページ（固定URL: https://shoma.studioroko.net/）
-      NFCカード・裏面QRはこのURLを指す。所属先が変わってもカードはそのまま使えるよう、
-      タイトル・OGP・フッターには店舗名を入れない。
-    ★ 所属先が変わったときに書き換える箇所は 2 つだけ（「所属」で検索）
-      ① ヒーローの所属表示 1 行（.brand__affiliation）
-      ② 「現在の所属」セクション（#salon。店舗名・公式LINE・地図・電話・住所）
-  -->
-  <title>脇 翔麻（SHOMA WAKI）| Hair Stylist</title>
-  <meta name="description" content="美容師 脇 翔麻（SHOMA WAKI）のプロフィールページです。Instagram、ご予約・お問い合わせはこちら。">
+  <title>RISE HAIR | 脇 翔麻</title>
+  <meta name="description" content="大阪・淀川区の美容室 RISE HAIR。美容師 脇 翔麻が、あなたの「なりたい」を叶えるヘアスタイルをご提案します。公式LINE・Instagram・ご予約はこちら。">
 
+  <!-- 正式URL（NFCカード・裏面QRの遷移先）: https://shoma.studioroko.net/ -->
   <link rel="canonical" href="https://shoma.studioroko.net/">
 
   <!-- ===== OGP（SNSシェア用） ===== -->
-  <meta property="og:type" content="profile">
-  <meta property="og:site_name" content="脇 翔麻 | SHOMA WAKI">
-  <meta property="og:title" content="脇 翔麻（SHOMA WAKI）| Hair Stylist">
-  <meta property="og:description" content="あなたの「なりたい」を叶えます。">
+  <!-- og:url / og:image も正式URL基準 -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="RISE HAIR">
+  <meta property="og:title" content="RISE HAIR | 脇 翔麻">
+  <meta property="og:description" content="あなたの「なりたい」を叶えます。大阪・淀川区の美容室 RISE HAIR">
   <meta property="og:url" content="https://shoma.studioroko.net/">
   <meta property="og:image" content="https://shoma.studioroko.net/assets/profile.jpg">
   <meta property="og:locale" content="ja_JP">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="脇 翔麻（SHOMA WAKI）| Hair Stylist">
+  <meta name="twitter:title" content="RISE HAIR | 脇 翔麻">
   <meta name="twitter:description" content="あなたの「なりたい」を叶えます。">
   <meta name="twitter:image" content="https://shoma.studioroko.net/assets/profile.jpg">
 
@@ -53,12 +47,13 @@
 
     <section class="hero" aria-label="プロフィール">
 
+      <!-- ★ プロフィール写真：assets/profile.jpg を差し替え -->
       <figure class="profile reveal" data-reveal-order="0">
         <div class="profile__float">
           <div class="profile__frame">
             <img
               src="assets/profile.jpg"
-              alt="美容師 脇 翔麻 のプロフィール写真"
+              alt="RISE HAIR 美容師 脇 翔麻 のプロフィール写真"
               class="profile__img"
               width="196"
               height="262"
@@ -69,25 +64,46 @@
         </div>
       </figure>
 
-      <!-- ===== 本人（主役） ===== -->
+      <!-- ★ 店舗名・美容師名・紹介文：以下3行を編集 -->
       <header class="brand reveal" data-reveal-order="1">
+        <p class="brand__salon">RISE HAIR</p>
         <h1 class="brand__name">脇 翔麻</h1>
-        <p class="brand__roman" lang="en">SHOMA WAKI</p>
-        <p class="brand__role" lang="en">Hair Stylist</p>
         <p class="brand__tagline">あなたの"なりたい"を叶えます。</p>
-        <!-- ★所属① 所属先が変わったらこの 1 行を書き換える（②は下の #salon セクション） -->
-        <p class="brand__affiliation"><a href="#salon">現在の所属<span class="brand__affiliation-name">RISE HAIR</span></a></p>
       </header>
 
     </section>
 
-    <!-- ===== 本人のSNS（所属先が変わっても変えない） ===== -->
-    <nav class="cards cards--personal" aria-label="SNS">
+    <!-- ★ リンクカード：各 href を編集 -->
+    <nav class="cards" aria-label="予約・連絡先">
 
+      <!-- ① 公式LINE -->
+      <a
+        href="https://line.me/R/ti/p/@417iydoj"
+        class="card card--featured reveal"
+        data-reveal-order="2"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="公式LINEで予約・相談（外部サイトが開きます）"
+      >
+        <span class="card__icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+            <path d="M19.5 3.5h-15A3.5 3.5 0 0 0 1 7v10a3.5 3.5 0 0 0 3.5 3.5h15A3.5 3.5 0 0 0 23 17V7a3.5 3.5 0 0 0-3.5-3.5zm-4.2 9.8h-1.4l-2.1 2.1v-2.1H9.5V8.5h5.8v4.8zm2.8-4.8h-1.4v4.8h1.4V8.5z"/>
+          </svg>
+        </span>
+        <span class="card__body">
+          <span class="card__label">公式LINEで予約・相談</span>
+          <span class="card__sub">ご予約・お問い合わせはこちら</span>
+        </span>
+        <span class="card__arrow" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 6l6 6-6 6"/></svg>
+        </span>
+      </a>
+
+      <!-- ② Instagram -->
       <a
         href="https://www.instagram.com/risehair_waki/"
         class="card reveal"
-        data-reveal-order="2"
+        data-reveal-order="3"
         target="_blank"
         rel="noopener noreferrer"
         aria-label="Instagramを見る（外部サイトが開きます）"
@@ -108,104 +124,62 @@
         </span>
       </a>
 
+      <!-- ③ Googleマップ -->
+      <a
+        href="https://maps.app.goo.gl/3NB99kREuBXNGjbu5?g_st=ic"
+        class="card reveal"
+        data-reveal-order="4"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Googleマップを開く（外部サイトが開きます）"
+      >
+        <span class="card__icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 21s7-4.5 7-11a7 7 0 1 0-14 0c0 6.5 7 11 7 11z"/>
+            <circle cx="12" cy="10" r="2.5"/>
+          </svg>
+        </span>
+        <span class="card__body">
+          <span class="card__label">Googleマップを開く</span>
+          <span class="card__sub">店舗までのアクセス</span>
+        </span>
+        <span class="card__arrow" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 6l6 6-6 6"/></svg>
+        </span>
+      </a>
+
+      <!-- ④ 電話 -->
+      <a
+        href="tel:0663963805"
+        class="card reveal"
+        data-reveal-order="5"
+        aria-label="RISE HAIRへ電話する"
+      >
+        <span class="card__icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" xmlns="http://www.w3.org/2000/svg">
+            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/>
+          </svg>
+        </span>
+        <span class="card__body">
+          <span class="card__label">電話する</span>
+          <span class="card__sub">06-6396-3805</span>
+        </span>
+        <span class="card__arrow" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 6l6 6-6 6"/></svg>
+        </span>
+      </a>
+
     </nav>
 
-    <!--
-      ===== ★所属② 現在の所属 =====
-      所属先が変わったら、このセクションの中（店舗名・公式LINE・地図・電話・住所）だけを書き換える。
-      ヒーローの所属表示 1 行（★所属①）も忘れずに合わせる。
-    -->
-    <section class="salon" id="salon" aria-labelledby="salon-name">
+    <!-- ★ 住所：以下を編集 -->
+    <address class="location reveal" data-reveal-order="6">
+      <span class="location__label">Access</span>
+      〒532-0033<br>
+      大阪府大阪市淀川区新高4-12-10
+    </address>
 
-      <header class="salon__head reveal" data-reveal-order="3">
-        <p class="salon__label" lang="en">Current Salon</p>
-        <h2 class="salon__name" id="salon-name">RISE HAIR</h2>
-        <p class="salon__note">現在の所属サロン</p>
-      </header>
-
-      <nav class="cards" aria-label="RISE HAIR の予約・連絡先">
-
-        <!-- RISE HAIR 公式LINE -->
-        <a
-          href="https://line.me/R/ti/p/@417iydoj"
-          class="card card--featured reveal"
-          data-reveal-order="4"
-          target="_blank"
-          rel="noopener noreferrer"
-          aria-label="RISE HAIR 公式LINEで予約・相談（外部サイトが開きます）"
-        >
-          <span class="card__icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-              <path d="M19.5 3.5h-15A3.5 3.5 0 0 0 1 7v10a3.5 3.5 0 0 0 3.5 3.5h15A3.5 3.5 0 0 0 23 17V7a3.5 3.5 0 0 0-3.5-3.5zm-4.2 9.8h-1.4l-2.1 2.1v-2.1H9.5V8.5h5.8v4.8zm2.8-4.8h-1.4v4.8h1.4V8.5z"/>
-            </svg>
-          </span>
-          <span class="card__body">
-            <span class="card__label">公式LINEで予約・相談</span>
-            <span class="card__sub">RISE HAIR 公式LINE</span>
-          </span>
-          <span class="card__arrow" aria-hidden="true">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 6l6 6-6 6"/></svg>
-          </span>
-        </a>
-
-        <!-- RISE HAIR Googleマップ -->
-        <a
-          href="https://maps.app.goo.gl/3NB99kREuBXNGjbu5?g_st=ic"
-          class="card reveal"
-          data-reveal-order="5"
-          target="_blank"
-          rel="noopener noreferrer"
-          aria-label="RISE HAIR の場所をGoogleマップで開く（外部サイトが開きます）"
-        >
-          <span class="card__icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" xmlns="http://www.w3.org/2000/svg">
-              <path d="M12 21s7-4.5 7-11a7 7 0 1 0-14 0c0 6.5 7 11 7 11z"/>
-              <circle cx="12" cy="10" r="2.5"/>
-            </svg>
-          </span>
-          <span class="card__body">
-            <span class="card__label">Googleマップを開く</span>
-            <span class="card__sub">サロンまでのアクセス</span>
-          </span>
-          <span class="card__arrow" aria-hidden="true">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 6l6 6-6 6"/></svg>
-          </span>
-        </a>
-
-        <!-- RISE HAIR 電話 -->
-        <a
-          href="tel:0663963805"
-          class="card reveal"
-          data-reveal-order="6"
-          aria-label="RISE HAIRへ電話する"
-        >
-          <span class="card__icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" xmlns="http://www.w3.org/2000/svg">
-              <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/>
-            </svg>
-          </span>
-          <span class="card__body">
-            <span class="card__label">電話する</span>
-            <span class="card__sub">06-6396-3805</span>
-          </span>
-          <span class="card__arrow" aria-hidden="true">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 6l6 6-6 6"/></svg>
-          </span>
-        </a>
-
-      </nav>
-
-      <!-- RISE HAIR 住所 -->
-      <address class="location reveal" data-reveal-order="7">
-        <span class="location__label">Access</span>
-        〒532-0033<br>
-        大阪府大阪市淀川区新高4-12-10
-      </address>
-
-    </section>
-
-    <footer class="footer reveal" data-reveal-order="8">
-      <p lang="en">&copy; 2026 Shoma Waki</p>
+    <footer class="footer reveal" data-reveal-order="7">
+      <p>&copy; 2026 RISE HAIR</p>
     </footer>
 
   </main>

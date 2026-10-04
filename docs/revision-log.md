@@ -74,3 +74,17 @@
 - 実物 2 枚の検品・納品
 
 残作業は追加の依頼・判断後に進める。
+
+## 2026-10-04 7/29版の店舗中心構成へ戻す（本人採用・ローカル commit / push 前）
+
+- 本人判断: 2026-10-01 の個人中心版をやめ、7/29版（`bc86dfc`）の店舗中心構成を採用
+- `index.html` / `style.css` は `bc86dfc` をそのまま基準にし、変更は次だけ
+  - canonical・og:url・og:image・twitter:image を正式URL `https://shoma.studioroko.net/` に（4か所）
+  - 「公開後にVercel URLへ置換」の古いコメント2か所を正式URLの記録に更新（表示に影響なし）
+  - PC で `.site` の max-width 440px が効くよう、横スクロール防止ルールから `.site` を外す（1行）
+- 氏名は「脇 翔麻」で確定（同日に一度「翔磨」への修正指示があったが本人が撤回）
+- 「現在の所属」・SHOMA WAKI・Hair Stylist・CURRENT SALON・© 2026 Shoma Waki は削除（7/29版に存在しない）
+- 改行コードは元のまま（index.html / style.css は CRLF）
+- 確認（ローカル・Playwright 390 / 1440px）: 28/28 PASS（横スクロールなし、エラーなし、翔磨0件・翔麻6件・「現在の所属」0件、
+  RISE HAIR が氏名より大きい、導線4件、PC幅440px）
+- 未実施: push / 本番反映 / 本番確認（本人承認待ち）
