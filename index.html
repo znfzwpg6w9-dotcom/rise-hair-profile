@@ -73,8 +73,8 @@
 
     </section>
 
-    <!-- ★ リンクカード：各 href を編集 -->
-    <nav class="cards" aria-label="予約・連絡先">
+    <!-- ★ リンクカード：各 href を編集（主要4導線は 2×2 でまとめて見せる。2026-10-04） -->
+    <nav class="cards cards--grid" aria-label="予約・連絡先">
 
       <!-- ① 公式LINE -->
       <a
@@ -91,7 +91,7 @@
           </svg>
         </span>
         <span class="card__body">
-          <span class="card__label">公式LINEで予約・相談</span>
+          <span class="card__label"><span class="nb">公式LINEで</span><span class="nb">予約・相談</span></span>
           <span class="card__sub">ご予約・お問い合わせはこちら</span>
         </span>
         <span class="card__arrow" aria-hidden="true">
@@ -140,7 +140,7 @@
           </svg>
         </span>
         <span class="card__body">
-          <span class="card__label">Googleマップを開く</span>
+          <span class="card__label"><span class="nb">Googleマップを</span><span class="nb">開く</span></span>
           <span class="card__sub">店舗までのアクセス</span>
         </span>
         <span class="card__arrow" aria-hidden="true">
@@ -162,7 +162,7 @@
         </span>
         <span class="card__body">
           <span class="card__label">電話する</span>
-          <span class="card__sub">06-6396-3805</span>
+          <span class="card__sub card__sub--keep">06-6396-3805</span>
         </span>
         <span class="card__arrow" aria-hidden="true">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 6l6 6-6 6"/></svg>
@@ -171,11 +171,9 @@
 
     </nav>
 
-    <!-- ★ 住所：以下を編集 -->
+    <!-- ★ 住所：以下を編集（独立した見出しは付けず、下部にコンパクト表示） -->
     <address class="location reveal" data-reveal-order="6">
-      <span class="location__label">Access</span>
-      〒532-0033<br>
-      大阪府大阪市淀川区新高4-12-10
+      〒532-0033 大阪府大阪市淀川区新高4-12-10
     </address>
 
     <footer class="footer reveal" data-reveal-order="7">

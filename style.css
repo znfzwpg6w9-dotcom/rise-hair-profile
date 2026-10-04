@@ -372,6 +372,106 @@ img {
   word-break: break-word;
 }
 
+/* ===== スクロールほぼなし構成（2026-10-04） =====
+   上部（写真・店名・氏名・短い説明）を詰め、主要4導線を 2×2 でまとめて一画面に収める。
+   既存の色・書体・カードの質感は変えず、大きさと余白だけを調整する */
+.site {
+  padding:
+    calc(1.5rem + var(--safe-top))
+    1.25rem
+    calc(1.25rem + var(--safe-bottom));
+}
+
+.hero {
+  margin-bottom: 1.5rem;
+}
+
+.profile {
+  margin-bottom: 1.25rem;
+}
+
+.profile__frame {
+  width: min(132px, 34vw);
+  border-radius: 22px;
+}
+
+.brand__salon {
+  font-size: clamp(1.5rem, 6vw, 1.75rem);
+  margin-bottom: 0.35rem;
+}
+
+.brand__name {
+  font-size: 1.125rem;
+  margin-bottom: 0.6rem;
+}
+
+.brand__tagline {
+  line-height: 1.8;
+}
+
+.cards--grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.625rem;
+  margin-bottom: 1.25rem;
+}
+
+.cards--grid .card,
+.cards--grid .card--featured {
+  position: relative;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.55rem;
+  min-height: 0;
+  padding: 0.9rem 0.85rem 0.85rem;
+  border-radius: 18px;
+}
+
+.cards--grid .card__body {
+  gap: 0.1rem;
+}
+
+.cards--grid {
+  grid-auto-rows: 1fr;
+}
+
+/* 2×2 では見出しだけで用途が分かるため補足文は出さない（電話番号だけ残す）。
+   見出しは語句（.nb）の切れ目でだけ折り返す（例: 公式LINEで｜予約・相談） */
+.cards--grid .card__label {
+  font-size: 0.8125rem;
+}
+
+.nb {
+  display: inline-block;
+  white-space: nowrap;
+}
+
+.cards--grid .card__sub {
+  display: none;
+}
+
+.cards--grid .card__sub--keep {
+  display: block;
+}
+
+.cards--grid .card__sub {
+  font-size: 0.625rem;
+}
+
+.cards--grid .card__arrow {
+  position: absolute;
+  top: 0.9rem;
+  right: 0.7rem;
+  width: 14px;
+  height: 14px;
+}
+
+.location {
+  font-size: 0.6875rem;
+  line-height: 1.6;
+  margin-bottom: 0.75rem;
+}
+
 /* ===== 表示アニメーション ===== */
 .reveal {
   opacity: 0;
