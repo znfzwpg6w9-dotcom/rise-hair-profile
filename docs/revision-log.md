@@ -100,3 +100,19 @@
   いずれも横スクロールなし・エラーなし・2×2・禁止語なし。既存の確認 28/28
 - 未実施: push / 本番反映 / 本番確認（本人承認待ち）
 
+## 2026-10-04 本番反映完了（スクロールほぼなし・主要4導線 2×2 構成）
+
+- 本人承認のうえ main を `--ff-only` で `c13446a` → `43c52fc` へ（merge commit なし）
+- push 完了: `12e4e95..43c52fc`（`c13446a` / `31707d4` / `43c52fc` の3件）
+- Vercel Production success（対象 commit `43c52fc`）。作成者によるブロックなし
+- 本番 https://shoma.studioroko.net/ の `index.html` / `style.css` / `script.js` は main とバイト一致、HTTP 200・証明書正常
+- 本番確認（Playwright）: 390×844 / 360×740 / 1440×900 すべて PASS
+  - 主要4導線（公式LINE / Instagram / Googleマップ / 電話）が 2×2、リンク先4件とも確認済み
+  - 氏名「脇 翔麻」。「現在の所属」・CURRENT SALON・翔磨・旧 vercel.app URL は0件
+  - title「RISE HAIR | 脇 翔麻」、canonical / og:url は正式URL
+  - 横スクロールなし、JS / console / network エラー 0件、スマホでほぼ1画面（内容の下端 390×844: y625 / 360×740: y612）
+- 本番スクリーンショット: `~/Desktop/rise-hair-final-review/prod-web-{390,360,1440}.png`
+  （控えを `~/dev/Studio-Roko/projects/rise-hair-card/delivery-prep/web-screenshots/` にコピー）
+- 上の「未実施: push / 本番反映 / 本番確認（本人承認待ち）」は本記録で解消
+- 残: 実機（iPhone / Android）での確認、NFC・QR から開く確認（カード到着後）
+
